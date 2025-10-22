@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Projekt 1">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <meta name="Author" content="Jan Słabuszewski">
+    <title>Historia Lotów Kosmicznych</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/zmientlo.js" type="text/javascript"></script>
+    <script src="../js/timedate.js" type="text/javascript"></script>
+</head>
+<body onload="startclock()">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="MainPage.html" class="logo-link">
+        <img src="../images/rocket_logo.png" alt="Logo" class="logo" loading="lazy">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="MainPage.html">Strona główna</a></li>
+          <li><a href="Pionierzy.html">Pionierzy</a></li>
+          <li><a href="Rakiety.html">Statki i rakiety</a></li>
+          <li><a href="Misje.html">Misje</a></li>
+          <li><a href="Galeria.html">Galeria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container gallery">
+      <h2>Galeria</h2>
+
+      <div class="grid">
+        <figure>
+          <a title="NASA/JPL-Caltech, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Voyager.jpg"><img width="512" alt="Photo of Voyager I" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Voyager.jpg/512px-Voyager.jpg?20090118095227" loading="lazy"></a>
+          <figcaption>Voyager</figcaption>
+        </figure>
+
+        <figure>
+          <a title="NASA, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:STS-134_International_Space_Station_after_undocking.jpg"><img width="512" alt="The International Space Station." src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/STS-134_International_Space_Station_after_undocking.jpg/512px-STS-134_International_Space_Station_after_undocking.jpg?20110530193454" loading="lazy"></a>
+          <figcaption>ISS</figcaption>
+        </figure>
+
+        <figure>
+          <a title="NASA/JPL/Cornell University, Maas Digital LLC, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:NASA_Mars_Rover.jpg"><img width="512" alt="Artist&#039;s portrayal of Opportunity" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/512px-NASA_Mars_Rover.jpg?20090103005528" loading="lazy"></a>
+          <figcaption>Łazik marsjański</figcaption>
+        </figure>
+
+        <figure>
+          <a title="Bill Ingalls, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Soyuz_TMA-9_launch.jpg"><img width="256" alt="Soyuz TMA-9 lift off  (on September 18, 2006.)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Soyuz_TMA-9_launch.jpg/256px-Soyuz_TMA-9_launch.jpg?20060919005247" loading="lazy"></a>
+          <figcaption>Start rakiety Soyuz TMS-9</figcaption>
+        </figure>
+
+        <figure>
+          <a title="NASA, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Hubble_2009_close-up.jpg"><img width="512" alt="Hubble 2009 close-up" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Hubble_2009_close-up.jpg/512px-Hubble_2009_close-up.jpg?20090521162407" loading="lazy"></a>
+          <figcaption>Teleskop kosmiczny (Hubble)</figcaption>
+        </figure>
+
+        <figure>
+          <a title="U.S. Air Force, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Wideband_Global_SATCOM_(3194628).jpg"><img width="256" alt="Wideband Global SATCOM (3194628)" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Wideband_Global_SATCOM_%283194628%29.jpg?20170319023520" loading="lazy"></a>
+          <figcaption>Satelita komunikacyjny</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="color-picker">
+        <figure class="color-btn" style="--color:#071224" onclick="changeBackground('#071224')" title="Blue"></figure>
+        <figure class="color-btn" style="--color:#0b0f17" onclick="changeBackground('#0b0f17')" title="Black"></figure>
+        <figure class="color-btn" style="--color:#2c0000" onclick="changeBackground('#2c0000')" title="Red"></figure>
+      </div>
+      <div class="footer-text">
+        <p><a href="https://www.nasa.gov">NASA</a> · <a href="https://www.esa.int">ESA</a></p>
+        <div class="datetime">
+          <div id="zegarek"></div>
+          <div id="data"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    $(".main-nav a").on({
+      "mouseenter" : function() {
+        $(this).stop().animate({ 
+          width: 220,
+          height: 30
+        }, 400);
+        $this.css("font-weight", "800");
+      },
+      "mouseleave" : function() {
+        $(this).stop().animate({
+          width: 160,
+          height: 20
+        }, 400);
+        $this.css("font-weight", "600");
+      }
+    });
+  </script>
+
+</body>
+</html>
