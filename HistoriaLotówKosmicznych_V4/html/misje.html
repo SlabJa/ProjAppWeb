@@ -1,0 +1,66 @@
+<section class=" container misje">
+  <h2>Najważniejsze misje w historii lotów kosmicznych</h2>
+  <div class="highlights">
+    <ol>
+      <li>Sputnik 1 (1957, ZSRR) - pierwszy sztuczny satelita Ziemi.</li>
+      <li>Vostok 1 (1961, ZSRR) - pierwszy lot człowieka w kosmos (Jurij Gagarin).</li>
+      <li>Apollo 11 (1969, USA) - pierwsze lądowanie człowieka na Księżycu.</li>
+      <li>Voyager 1 (1977, USA) - sonda, która opuściła Układ Słoneczny.</li>
+      <li>Mir (1986, ZSRR) - pierwsza długotrwała stacja kosmiczna.</li>
+      <li>Międzynarodowa Stacja Kosmiczna (ISS) (1998-obecnie) - wspólny projekt wielu krajów.</li>
+      <li>Curiosity / Perseverance (2012 / 2021, NASA) - łaziki badające powierzchnię Marsa.</li>
+      <li>Artemis I (2022, NASA) - początek powrotu ludzi na Księżyc.</li>
+    </ol>
+  </div>
+
+  <section class="dekady">
+    <h2>Dekady</h2>
+    <h4>Lata 60.</h4>
+    <div>
+      <p>W latach 60. dominowała rywalizacja ZSRR-USA: pierwszy człowiek w kosmosie i pierwsze lądowanie na Księżycu (Apollo 11, 1969).</p>
+    </div>
+
+    <h4>Lata 80.</h4>
+    <div>
+      <p>Era wahadłowców wprowadziła regularne loty orbitalne i montaż dużych struktur — preludium do Międzynarodowej Stacji Kosmicznej.</p>
+    </div>
+
+    <h4>Lata 2000+</h4>
+    <div>
+      <p>Era ISS, misje bezzałogowe na Marsa, rozwój komercyjnych operatorów (SpaceX, Blue Origin) i nowe ambicje eksploracyjne.</p>
+    </div>
+  </section>
+</section>
+
+<div class="rocket-holder">
+  <div id="animacjaTestowa3" class="test-block"></div>
+  <img src="images/freepik__adjust__71466.png" alt="Rocket" class="rocket-img">
+
+  <script>
+    let growth = 10;
+    let resetTimer;
+
+    $("#animacjaTestowa3").on("click", function() {
+      const $this = $(this);
+      const maxWidth = $(".container").width() * 1.22;
+      const currentWidth = $this.width();
+
+      $this.stop(true, false);
+
+      if (currentWidth + growth < maxWidth) {
+        $this.animate({
+        width: "+=" + growth,
+      }, 150);
+      } else {
+        $this.width(maxWidth);
+      }
+
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(function() {
+        $this.animate({
+          width: "100px",
+        }, 500);
+      }, 500);
+    });
+  </script>
+</div>

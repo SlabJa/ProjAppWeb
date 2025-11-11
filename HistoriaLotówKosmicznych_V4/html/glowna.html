@@ -1,0 +1,40 @@
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Od marzeń do gwiazd</h1>
+      <p>Krótka podróż przez najważniejsze momenty historii lotów kosmicznych — od pierwszego sztucznego satelity, przez pierwszego człowieka w kosmosie, aż po współczesne misje badawcze.</p>
+
+      <ul class="highlights">
+        <li>Pierwszy satelita — <strong>Sputnik 1</strong></li>
+        <li>Pierwszy człowiek w kosmosie — <strong>Jurij Gagarin</strong></li>
+        <li>Lądowanie na Księżycu — <strong>Apollo 11</strong></li>
+      </ul>
+
+    </div>
+
+    <div class="hero-visual">
+      <img id="animacjaTestowa1" src="images/pexels-spacex-23795.jpg" alt="rakieta" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<script>
+$("#animacjaTestowa1").on("click", function() {
+  const $this = $(this);
+
+  if (!$this.data("expanded")) {
+    $this.animate({
+      width: "500px",
+    }, 400);
+
+    $this.data("expanded", true);
+  } else {
+    $this.animate({
+      width: "420px",
+    }, 400);
+
+    $this.data("expanded", false);
+  }
+});
+</script>
